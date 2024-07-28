@@ -35,7 +35,7 @@ section {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) translateY(50px);
+    transform: translate(-50%, -50%) translateY(0px);
     z-index: 1;
     transition: transform 0.1s ease-out;
 }
@@ -52,8 +52,12 @@ section {
 }
 
 .title {
-    font-size: 10vw;
+    font-size: 6vw;
     font-weight: 100;
+}
+
+.box {
+    width: 300px;
 }
 
 @media (max-width : 480px) {

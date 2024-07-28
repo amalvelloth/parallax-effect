@@ -29,17 +29,21 @@
             <img src="./assets/zenitsu.png" class="img-fluid" alt="character-image">
         </div>
     </section>
-    <section style="height: 100vh; background-color: black;">
-        <h1 class="title text-white m-0 top-0 position-absolute">Parallax</h1>
+    <section class="d-flex flex-column justify-content-start" style="height: 100vh; background-color: black;">
+        <h1 class="title text-white m-0">善逸</h1>
+        <h1 class="title text-white m-0" style="font-weight: 500;">zenitsu</h1>
+
+        <div class="box1 box">
+            <img src="./assets/zenitsu-potrait.jpg" class="img-fluid" alt="zenitsu-potrait img">
+        </div>
+        <div class="box2 box">
+            <img src="./assets/action.jpg" class="img-fluid" alt="zenitsu-potrait img">
+        </div>
     </section>
 
-    <script>
-        document.addEventListener('scroll', function () {
-            const scrollY = window.scrollY;
-            document.querySelector('.moon').style.transform = `translate(-50%, -50%) translateY(${scrollY * -0.1}px)`;
-            document.querySelector('.zenitsu img').style.transform = `translateY(${scrollY * 0.3}px)`;
-        });
-    </script>
+    
+
+    <script src="script.js"></script>
 </body>
 
 </html>
