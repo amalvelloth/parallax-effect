@@ -11,25 +11,20 @@
     <!--Bootstrap-->
 </head>
 <body>
-    <section>
-        <section class="Parallax-1"> 
-            <div class="moon"></div> 
-            <div class="zenitsu">
-                <img src="./assets/zenitsu.png" class="img-fluid" alt="charector-image">
-            </div> 
-        </section>
+    <section class="Parallax-1">
+        <div class="moon"></div>
+        <div class="zenitsu">
+            <img src="./assets/zenitsu.png" class="img-fluid" alt="character-image">
+        </div>
     </section>
-    <section  style="height: 100vh;background-color: black;">
-
-    </section>
-
-
-
-    <!-- <div class="section1">
-             <div class="text">PARALLAX</div>
-         </div>
-
-        <div class="section2">
-             <div class="text">NORMAL</div>
-        </div> -->
+    <section style="height: 100vh; background-color: black;"></section>
+    
+    <script>
+        document.addEventListener('scroll', function() {
+            const scrollY = window.scrollY;
+            document.querySelector('.moon').style.transform = `translate(-50%, -50%) translateY(${scrollY * 0.1}px)`;
+            document.querySelector('.zenitsu img').style.transform = `translateY(${scrollY * 0.3}px)`;
+        });
+    </script>
+</body>
 </html>
