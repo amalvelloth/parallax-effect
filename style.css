@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Suburbia';
+  src: url(./custom_font/XenophobiaNominal-RAxA.ttf);
+}
+
 
 
 section {
@@ -53,9 +58,9 @@ section {
 
 .zenitsu h1 {
   padding-top: 3rem;
-  color: whitesmoke;
-  font-size: 72px;
-  font-family: "Oswald", sans-serif;
+  color: rgba(245, 245, 245, 0.364);
+  font-size: 8rem;
+  font-family: 'Suburbia';
   font-weight: 100;
 }
 
