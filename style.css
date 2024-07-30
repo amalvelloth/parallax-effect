@@ -51,13 +51,21 @@ section {
     transition: transform 0.1s ease-out;
 }
 
+.zenitsu h1 {
+  padding-top: 3rem;
+  color: whitesmoke;
+  font-size: 72px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 100;
+}
+
 .title {
     font-size: 6vw;
     font-weight: 100;
 }
 
 .box {
-    width: 300px;
+    width: 100%;
 }
 
 @media (max-width : 480px) {
@@ -65,7 +73,19 @@ section {
         font-size: 20vw;
     }
 }
-
+@media (max-width: 768px) {
+  .box {
+    margin: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  .box {
+    margin: 5rem;
+  }
+  .box {
+    width: 80%;
+  }
+}
 
 /* .moon {
     position: absolute;
