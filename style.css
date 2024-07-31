@@ -12,7 +12,6 @@
 
 
 section {
-    position: relative;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -46,22 +45,22 @@ section {
 }
 
 .zenitsu {
-    position: relative;
     z-index: 2;
 }
 
 .zenitsu img {
     max-width: 300px;
     transform: translateY(0);
-    transition: transform 0.1s ease-out;
+    transition: transform 0.5s ease-out;
 }
 
 .zenitsu h1 {
   padding-top: 3rem;
-  color: rgba(245, 245, 245, 0.364);
+  color: rgba(245, 245, 245, 0.267);
   font-size: 8rem;
   font-family: 'Suburbia';
   font-weight: 100;
+  z-index: 0;
 }
 
 .title {
@@ -71,7 +70,56 @@ section {
 
 .box {
     width: 100%;
+    position: relative;
+    overflow: hidden;
 }
+
+.box .rock-piece-1 {
+  position: absolute;
+  width: 50px;
+  filter: blur(3px);
+  right: 10px;
+  bottom: -220px;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
+}
+.box .rock-piece-2 {
+  position: absolute;
+  width: 50px;
+  filter: blur(3px);
+  left: 30px;
+  bottom: 0;
+  transform: translateY(0) rotate(0deg);
+  transition: transform 0.5s ease-out;
+}
+.box .rock-piece-3 {
+  position: absolute;
+  width: 70px;
+  filter: blur(3.5px);
+  left: 100px;
+  bottom: -50px;
+  transform: translateY(0) rotate(-35deg);
+  transition: transform 0.5s ease-out;
+}
+.box .rock-piece-4 {
+  position: absolute;
+  width: 30px;
+  filter: blur(1.1px);
+  left: 250px;
+  bottom: 100px;
+  transform: translateY(0) rotate(-35deg);
+  transition: transform 0.5s ease-out;
+}
+.box .rock-piece-5 {
+  position: absolute;
+  width: 30px;
+  filter: blur(1.1px);
+  right: 148px;
+  bottom: -10px;
+  transform: translateY(0) rotate(-35deg);
+  transition: transform 0.5s ease-out;
+}
+
 
 @media (max-width : 480px) {
     .title {
@@ -91,89 +139,3 @@ section {
     width: 80%;
   }
 }
-
-/* .moon {
-    position: absolute;
-    width: 800px;
-    height: 800px;
-    background: url('./assets/moon.png') no-repeat center center;
-    background-size: cover;
-} */
-
-
-
-
-
-
-
-
-
-
-
-/* 
-
-html {
-    height: 100vh;
-    overflow: hidden;
-  }
-  body {
-    width: 100vw;
-    height: 100vh;
-    margin:0;
-    background: #222;
-    perspective: 1px;
-    transform-style: preserve-3d;
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
-  .section1, .section2 {
-    width:100%;
-    min-height: 100vh;
-    position: relative;
-    transform-style: preserve-3d;
-  }
-  .section1::before {
-    content:"";
-    width:100%;
-    height: 100%;
-    position: absolute;
-    background: url("./assets/sky.jpg") top center;
-    background-size: cover;
-    transform: translateZ(-1px) scale(2.2);
-    filter: blur(2px);
-  }
-  .section1::after {
-    content:"";
-    width:100%;
-    height: 100%;
-    position: absolute;
-    background: url("outer-layer-blur.png") top center;
-    background-size: cover;
-  }
-  .section1 .text {
-    top:10%;
-    transform: translateZ(-0.5px) scale(1.5,1.6) translate(-33%,10%);
-  }
-  .section2 {
-    background: rgb(68,35,19);
-  }
-  .text {
-    top:30%;
-    left:50%;
-    position: absolute;
-    font-family: 'Franklin Gothic Heavy';
-    font-size: 15vw;
-    color:white;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.3),
-    5px 5px 70px rgba(255,255,255,0.5);
-    transform: scale(1,1.1) translate(-50%, 10%);
-  }
-   */
-  
-   /* <!-- <div class="section1">
-   <div class="text">PARALLAX</div>
-</div>
-
-<div class="section2">
-   <div class="text">NORMAL</div>
-</div> --> */
