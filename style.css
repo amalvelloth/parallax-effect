@@ -76,7 +76,8 @@ section {
 
 .box .rock-piece-1 {
   position: absolute;
-  width: 50px;
+  /* width: 50px; */
+  /* width: 20vw; */
   filter: blur(3px);
   right: 10px;
   bottom: -220px;
@@ -85,7 +86,8 @@ section {
 }
 .box .rock-piece-2 {
   position: absolute;
-  width: 50px;
+  /* width: 50px; */
+  /* width: 20vw; */
   filter: blur(3px);
   left: 30px;
   bottom: 0;
@@ -94,7 +96,8 @@ section {
 }
 .box .rock-piece-3 {
   position: absolute;
-  width: 70px;
+  /* width: 20px; */
+  /* width: 20vw; */
   filter: blur(3.5px);
   left: 100px;
   bottom: -50px;
@@ -103,7 +106,8 @@ section {
 }
 .box .rock-piece-4 {
   position: absolute;
-  width: 30px;
+  /* width: 30px; */
+  /* width: 20vw; */
   filter: blur(1.1px);
   left: 250px;
   bottom: 100px;
@@ -112,7 +116,8 @@ section {
 }
 .box .rock-piece-5 {
   position: absolute;
-  width: 30px;
+  /* width: 30px; */
+  /* width: 20vw; */
   filter: blur(1.1px);
   right: 148px;
   bottom: -10px;
@@ -121,9 +126,25 @@ section {
 }
 
 
+
 @media (max-width : 480px) {
     .title {
         font-size: 20vw;
+    }
+    .box .rock-piece-1 {
+      width: 13vw;
+    }
+    .box .rock-piece-2 {
+      width: 11vw;
+    }
+    .box .rock-piece-3 {
+      width: 19vw;
+    }
+    .box .rock-piece-4 {
+      width: 10vw;
+    }
+    .box .rock-piece-5 {
+      width: 8vw;
     }
 }
 @media (max-width: 768px) {
@@ -137,5 +158,43 @@ section {
   }
   .box {
     width: 80%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 991px) {
+  .box .rock-piece-1 {
+    width: 9vw;
+  }
+  .box .rock-piece-2 {
+    width: 11vw;
+  }
+  .box .rock-piece-3 {
+    width: 15vw;
+  }
+  .box .rock-piece-4 {
+    width: 8vw;
+  }
+  .box .rock-piece-5 {
+    width: 5vw;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .box .rock-piece-1 {
+    width: 5vw;
+  }
+  .box .rock-piece-2 {
+    width: 10vw;
+  }
+  .box .rock-piece-3 {
+    width: 10vw;
+  }
+  .box .rock-piece-4 {
+    width: 7vw;
+    right: 0;
+    position: absolute;
+  }
+  .box .rock-piece-5 {
+    width: 4vw;
   }
 }
