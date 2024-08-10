@@ -36,20 +36,20 @@ document.addEventListener("scroll", function () {
     } else {
       // Transformations for screens smaller than 991px
       document.querySelector(".rock-piece-1").style.transform = `translateY(${
-        scrollY * -0.3
+        scrollY * -0.35
       }px) rotate(${scrollY * 0.15}deg)`;
       document.querySelector(".rock-piece-2").style.transform = `translateY(${
-        scrollY * -0.2
+        scrollY * -0.25
       }px) rotate(${scrollY * -0.15}deg)`;
       document.querySelector(".rock-piece-3").style.transform = `translateY(${
-        scrollY * -0.1
+        scrollY * -0.15
       }px) rotate(${scrollY * 0.05}deg)`;
       document.querySelector(".rock-piece-4").style.transform = `translateY(${
-        scrollY * -0.05
+        scrollY * -0.055
       }px) rotate(${scrollY * -0.2}deg)`;
       document.querySelector(".rock-piece-5").style.transform = `translateY(${
-        scrollY * -0.05
-      }px) rotate(${scrollY * 0.4}deg)`;
+        scrollY * -0.055
+      }px) rotate(${scrollY * 0.85}deg)`;
     }
   }
 

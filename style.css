@@ -92,7 +92,7 @@ section {
   /* width: 20vw; */
   filter: blur(3px);
   left: 30px;
-  bottom: 0;
+  bottom: -40px;
   transform: translateY(0) rotate(0deg);
   transition: transform 0.5s ease-out;
 }
