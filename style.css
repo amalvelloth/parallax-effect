@@ -8,6 +8,10 @@
   font-family: 'Suburbia';
   src: url(./custom_font/XenophobiaNominal-RAxA.ttf);
 }
+@font-face {
+  font-family: 'Osake';
+  src: url(./custom_font/osake.regular.ttf);
+}
 
 
 
@@ -45,10 +49,13 @@ section {
 }
 
 .zenitsu {
+  position: relative;
     z-index: 2;
 }
 
 .zenitsu img {
+  position: relative;
+    z-index: 2;
     max-width: 300px;
     transform: translateY(0);
     transition: transform 0.5s ease-out;
@@ -61,11 +68,6 @@ section {
   font-family: 'Suburbia';
   font-weight: 100;
   z-index: 0;
-}
-
-.title {
-    font-size: 6vw;
-    font-weight: 100;
 }
 
 .box {
@@ -131,36 +133,47 @@ section {
   bottom: 0;
   left: 120px;
   width: 10vw;
+  filter: brightness(0.5) contrast(1.2) saturate(1.5);
 } 
 .box .big-rock-2 {
   position: absolute; 
   bottom: 10px;
   left: 400px;
   width: 10vw;
+  filter: brightness(0.5) contrast(1.2) saturate(1.5);
+
 } 
 .box .big-rock-3 {
   position: absolute; 
   bottom: 50px;
   left: 300px;
   width: 10vw;
+  filter: brightness(0.5) contrast(1.2) saturate(1.5);
+
 } 
 .box .big-rock-4 {
   position: absolute; 
   bottom: 30px;
   right: 100px;
   width: 10vw;
+  filter: brightness(0.5) contrast(1.2) saturate(1.5);
+
 } 
 .box .big-rock-5 {
   position: absolute; 
   bottom: 30px;
   left: 200px;
   width: 10vw;
+  filter: brightness(0.5) contrast(1.2) saturate(1.5);
+
 } 
 .box .big-rock-5 {
   position: absolute; 
   bottom: 0;
   right: 50px;
   width: 10vw;
+  filter: brightness(0.5) contrast(1.2) saturate(1.5);
+
 } 
 .box .big-rock-6 {
   position: absolute; 
@@ -168,11 +181,15 @@ section {
   bottom: 0;
   rotate: 35deg;
   width: 10vw;
+  filter: brightness(0.5) contrast(1.2) saturate(1.5);
+
 } 
 .box .big-rock-7 {
   position: absolute; 
   bottom: 0;
   width: 10vw;
+  filter: brightness(0.5) contrast(1.2) saturate(1.5);
+
 }
 .box .big-rock-8 {
   position: absolute; 
@@ -180,12 +197,14 @@ section {
   bottom: 20px;
   width: 10vw;
   rotate: -35deg;
+  filter: brightness(0.5) contrast(1.2) saturate(1.5);
 }
 
 
 @media (max-width : 480px) {
     .title {
         font-size: 20vw;
+        font-family: 'Osake';
     }
     .box .rock-piece-1 {
       width: 13vw;
@@ -201,6 +220,34 @@ section {
     }
     .box .rock-piece-5 {
       width: 8vw;
+    }
+
+    /* Big rocks */
+    .box .big-rock-1 {
+      width: 15vw;
+    }
+    .box .big-rock-2 {
+      width: 15vw;
+    }
+    .box .big-rock-3 {
+      width: 15vw;
+    }
+    .box .big-rock-4 {
+      width: 15vw;
+    }
+    .box .big-rock-5 {
+      width: 15vw;
+    }
+    .box .big-rock-6 {
+      width: 15vw;
+    }
+    .box .big-rock-7 {
+      width: 15vw;
+    }
+    /* Big rocks */
+
+    .zenitsu h1 {
+      font-size: 18vw;
     }
 }
 @media (max-width: 768px) {
@@ -233,6 +280,10 @@ section {
   .box .rock-piece-5 {
     width: 5vw;
   }
+  .title {
+    font-size: 6em;
+    font-family: 'Osake';
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -252,5 +303,9 @@ section {
   }
   .box .rock-piece-5 {
     width: 4vw;
+  }
+  .title {
+    font-size: 8em;
+    font-family: 'Osake';
   }
 }
