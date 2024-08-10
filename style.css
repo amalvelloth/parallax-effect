@@ -200,12 +200,32 @@ section {
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
 }
 
+.title-japan {
+  font-family: "Noto Serif JP", serif;
+}
+.title-zenitsu {
+  font-family: 'Osake';
+}
+
+.red {
+  position: relative;
+  background: url('./assets/red.png') no-repeat center center;
+  background-size: contain;
+  width: 100%;
+}
+
+footer {
+  background-color: black;
+}
+
+
+/* ////////////////////////////////////////   Media Queries */
 
 @media (max-width : 480px) {
-    .title {
+    .title-zenitsu, .title-japan {
         font-size: 20vw;
-        font-family: 'Osake';
     }
+    
     .box .rock-piece-1 {
       width: 13vw;
     }
@@ -280,9 +300,8 @@ section {
   .box .rock-piece-5 {
     width: 5vw;
   }
-  .title {
+  .title-zenitsu, .title-japan {
     font-size: 6em;
-    font-family: 'Osake';
   }
 }
 
@@ -304,8 +323,7 @@ section {
   .box .rock-piece-5 {
     width: 4vw;
   }
-  .title {
+  .title-zenitsu, .title-japan {
     font-size: 8em;
-    font-family: 'Osake';
   }
 }
