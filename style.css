@@ -216,6 +216,12 @@ section {
 
 footer {
   background-color: black;
+  display: flex;
+  justify-content: center;
+}
+footer img {
+  width: 350px;
+  margin: 5rem;
 }
 
 
