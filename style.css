@@ -198,7 +198,7 @@ section {
 } 
 .box .big-rock-7 {
   position: absolute; 
-  bottom: -500px;
+  bottom: 0;
   width: 10vw;
   transform: translateY(0);
   transition: transform 0.5s ease-out;
@@ -333,7 +333,7 @@ video {
 
 @media only screen and (min-width: 768px) {
 
-  .logo {
+   .logo {
     position: absolute;
   }
   
