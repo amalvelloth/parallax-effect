@@ -131,6 +131,7 @@ section {
   bottom: 0;
   left: 120px;
   width: 10vw;
+  rotate: -25deg;
   transform: translateY(0);
   transition: transform 0.5s ease-out;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
@@ -182,7 +183,7 @@ section {
 }
 .box .big-rock-6 {
   position: absolute;
-  left: 50%;
+  left: 25%;
   bottom: 0;
   rotate: -35deg;
   width: 10vw;
@@ -200,12 +201,12 @@ section {
 }
 .box .big-rock-8 {
   position: absolute;
-  right: 50px;
+  right: 30%;
   bottom: 20px;
   width: 10vw;
   transform: translateY(0);
   transition: transform 0.5s ease-out;
-  rotate: 35deg;
+  rotate: 52deg;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
 }
 
