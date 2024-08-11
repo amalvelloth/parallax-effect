@@ -53,16 +53,39 @@ document.addEventListener("scroll", function () {
     }
   }
 
-  const title = document.querySelector(".Parallax-1 h1");
-  if (document.querySelector(".Parallax-1")) {
-    window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY; // Get the current scroll position
-      const scaleValue = 1 + scrollY * 0.001; // Adjust the scale factor based on scroll
+  // Animations for the big rocks
+  const box2 = document.querySelector(".box2");
+  if (box2) {
+    document.querySelector(".big-rock-1").style.transform = `translateY(${
+      scrollY * -0.4
+    }px) rotate(${scrollY * 0.2}deg)`;
+    document.querySelector(".big-rock-2").style.transform = `translateY(${
+      scrollY * -0.3
+    }px) rotate(${scrollY * -0.15}deg)`;
+    document.querySelector(".big-rock-3").style.transform = `translateY(${
+      scrollY * -0.35
+    }px) rotate(${scrollY * 0.25}deg)`;
+    document.querySelector(".big-rock-4").style.transform = `translateY(${
+      scrollY * -0.2
+    }px) rotate(${scrollY * -0.1}deg)`;
+    document.querySelector(".big-rock-5").style.transform = `translateY(${
+      scrollY * -0.4
+    }px) rotate(${scrollY * 0.4}deg)`;
+    document.querySelector(".big-rock-6").style.transform = `translateY(${
+      scrollY * -0.5
+    }px) rotate(${scrollY * -0.3}deg)`;
+    document.querySelector(".big-rock-7").style.transform = `translateY(${
+      scrollY * -0.45
+    }px) rotate(${scrollY * 0.35}deg)`;
+    document.querySelector(".big-rock-8").style.transform = `translateY(${
+      scrollY * -0.25
+    }px) rotate(${scrollY * -0.2}deg)`;
+  }
 
-      // Apply both translation and scaling
-      title.style.transform = `translateY(${
-        scrollY * 0.1
-      }px) scale(${scaleValue})`;
-    });
+  // Animations for Parallax-1 h1 element
+  const title = document.querySelector(".Parallax-1 h1");
+  if (title) {
+    const scaleValue = 1 + scrollY * 0.001; // Adjust the scale factor based on scroll
+    title.style.transform = `translateY(${scrollY * 0.1}px) scale(${scaleValue})`;
   }
 });

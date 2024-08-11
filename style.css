@@ -133,6 +133,8 @@ section {
   bottom: 0;
   left: 120px;
   width: 10vw;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
 } 
 .box .big-rock-2 {
@@ -140,6 +142,8 @@ section {
   bottom: 10px;
   left: 400px;
   width: 10vw;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
 
 } 
@@ -148,6 +152,8 @@ section {
   bottom: 50px;
   left: 300px;
   width: 10vw;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
 
 } 
@@ -164,6 +170,8 @@ section {
   bottom: 30px;
   left: 200px;
   width: 10vw;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
 
 } 
@@ -172,6 +180,8 @@ section {
   bottom: 0;
   right: 50px;
   width: 10vw;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
 
 } 
@@ -181,13 +191,17 @@ section {
   bottom: 0;
   rotate: 35deg;
   width: 10vw;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
 
 } 
 .box .big-rock-7 {
   position: absolute; 
-  bottom: 0;
+  bottom: -500px;
   width: 10vw;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
 
 }
@@ -196,6 +210,8 @@ section {
   right: 0;
   bottom: 20px;
   width: 10vw;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
   rotate: -35deg;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
 }
@@ -222,6 +238,9 @@ footer {
 footer img {
   width: 350px;
   margin: 5rem;
+}
+video {
+  width: 100%;
 }
 
 
