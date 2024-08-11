@@ -1,79 +1,77 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
-  font-family: 'Suburbia';
+  font-family: "Suburbia";
   src: url(./custom_font/XenophobiaNominal-RAxA.ttf);
 }
 @font-face {
-  font-family: 'Osake';
+  font-family: "Osake";
   src: url(./custom_font/osake.regular.ttf);
 }
 
-
-
 section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .Parallax-1 {
-    background: url('./assets/sky.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+  background: url("./assets/sky.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .moon {
-    background: url('./assets/moon.png') no-repeat center center;
-    background-size: cover;
-    width: 800px;
-    height: 800px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) translateY(0px);
-    z-index: 1;
-    transition: transform 0.1s ease-out;
+  background: url("./assets/moon.png") no-repeat center center;
+  background-size: cover;
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(0px);
+  z-index: 1;
+  transition: transform 0.1s ease-out;
 }
 
 .zenitsu {
   position: relative;
-    z-index: 2;
+  z-index: 2;
 }
 
 .zenitsu img {
   position: relative;
-    z-index: 2;
-    max-width: 300px;
-    transform: translateY(0);
-    transition: transform 0.5s ease-out;
+  z-index: 2;
+  max-width: 300px;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
 }
 
 .zenitsu h1 {
   padding-top: 3rem;
   color: rgba(245, 245, 245, 0.267);
   font-size: 8rem;
-  font-family: 'Suburbia';
+  font-family: "Suburbia";
   font-weight: 100;
   z-index: 0;
 }
 
 .box {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .box .rock-piece-1 {
@@ -129,64 +127,59 @@ section {
 /* second section */
 
 .box .big-rock-1 {
-  position: absolute; 
+  position: absolute;
   bottom: 0;
   left: 120px;
   width: 10vw;
   transform: translateY(0);
   transition: transform 0.5s ease-out;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
-} 
+}
 .box .big-rock-2 {
-  position: absolute; 
+  position: absolute;
   bottom: 10px;
   left: 400px;
   width: 10vw;
   transform: translateY(0);
   transition: transform 0.5s ease-out;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
-
-} 
+}
 .box .big-rock-3 {
-  position: absolute; 
+  position: absolute;
   bottom: 50px;
   left: 300px;
   width: 10vw;
   transform: translateY(0);
   transition: transform 0.5s ease-out;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
-
-} 
+}
 .box .big-rock-4 {
-  position: absolute; 
+  position: absolute;
   bottom: 30px;
   right: 100px;
   width: 10vw;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
-
-} 
+}
 .box .big-rock-5 {
-  position: absolute; 
+  position: absolute;
   bottom: 30px;
   left: 200px;
   width: 10vw;
   transform: translateY(0);
   transition: transform 0.5s ease-out;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
-
-} 
+}
 .box .big-rock-5 {
-  position: absolute; 
+  position: absolute;
   bottom: 0;
   right: 50px;
   width: 10vw;
   transform: translateY(0);
   transition: transform 0.5s ease-out;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
-
-} 
+}
 .box .big-rock-6 {
-  position: absolute; 
+  position: absolute;
   left: 0;
   bottom: 0;
   rotate: 35deg;
@@ -194,19 +187,17 @@ section {
   transform: translateY(0);
   transition: transform 0.5s ease-out;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
-
-} 
+}
 .box .big-rock-7 {
-  position: absolute; 
+  position: absolute;
   bottom: 0;
   width: 10vw;
   transform: translateY(0);
   transition: transform 0.5s ease-out;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
-
 }
 .box .big-rock-8 {
-  position: absolute; 
+  position: absolute;
   right: 0;
   bottom: 20px;
   width: 10vw;
@@ -220,81 +211,92 @@ section {
   font-family: "Noto Serif JP", serif;
 }
 .title-zenitsu {
-  font-family: 'Osake';
+  font-family: "Osake";
 }
 
 .red {
   position: relative;
-  background: url('./assets/red.png') no-repeat center center;
+  background: url("./assets/red.png") no-repeat center center;
   background-size: contain;
   width: 100%;
 }
 
 footer {
+  position: relative;
   background-color: black;
   display: flex;
   justify-content: center;
+  z-index: 1;
 }
-footer img {
+.logo {
   width: 350px;
   margin: 5rem;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
 }
 video {
+  padding: 0;
+  margin: 0;
+  display: block;
   width: 100%;
   object-fit: cover;
 }
 
-
 /* ////////////////////////////////////////   Media Queries */
 
-@media (max-width : 480px) {
-    .title-zenitsu, .title-japan {
-        font-size: 20vw;
-    }
-    
-    .box .rock-piece-1 {
-      width: 13vw;
-    }
-    .box .rock-piece-2 {
-      width: 11vw;
-    }
-    .box .rock-piece-3 {
-      width: 19vw;
-    }
-    .box .rock-piece-4 {
-      width: 10vw;
-    }
-    .box .rock-piece-5 {
-      width: 8vw;
-    }
+@media (max-width: 480px) {
+  .title-zenitsu,
+  .title-japan {
+    font-size: 20vw;
+  }
 
-    /* Big rocks */
-    .box .big-rock-1 {
-      width: 15vw;
-    }
-    .box .big-rock-2 {
-      width: 15vw;
-    }
-    .box .big-rock-3 {
-      width: 15vw;
-    }
-    .box .big-rock-4 {
-      width: 15vw;
-    }
-    .box .big-rock-5 {
-      width: 15vw;
-    }
-    .box .big-rock-6 {
-      width: 15vw;
-    }
-    .box .big-rock-7 {
-      width: 15vw;
-    }
-    /* Big rocks */
+  .box .rock-piece-1 {
+    width: 13vw;
+  }
+  .box .rock-piece-2 {
+    width: 11vw;
+  }
+  .box .rock-piece-3 {
+    width: 19vw;
+  }
+  .box .rock-piece-4 {
+    width: 10vw;
+  }
+  .box .rock-piece-5 {
+    width: 8vw;
+  }
 
-    .zenitsu h1 {
-      font-size: 18vw;
-    }
+  /* Big rocks */
+  .box .big-rock-1 {
+    width: 15vw;
+  }
+  .box .big-rock-2 {
+    width: 15vw;
+  }
+  .box .big-rock-3 {
+    width: 15vw;
+  }
+  .box .big-rock-4 {
+    width: 15vw;
+  }
+  .box .big-rock-5 {
+    width: 15vw;
+  }
+  .box .big-rock-6 {
+    width: 15vw;
+  }
+  .box .big-rock-7 {
+    width: 15vw;
+  }
+
+  .box .big-rock-1 {
+    bottom: 0;
+  }
+  /* Big rocks */
+
+  .zenitsu h1 {
+    font-size: 18vw;
+  }
 }
 @media (max-width: 768px) {
   .box {
@@ -326,17 +328,20 @@ video {
   .box .rock-piece-5 {
     width: 5vw;
   }
-  .title-zenitsu, .title-japan {
+  .title-zenitsu,
+  .title-japan {
     font-size: 6em;
   }
+  
 }
 
 @media only screen and (min-width: 768px) {
-
-   .logo {
-    position: absolute;
+  footer {
+    position: relative;
   }
-  
+   footer .logo {
+    position: absolute;
+   }
 }
 
 @media only screen and (min-width: 992px) {
@@ -357,7 +362,11 @@ video {
   .box .rock-piece-5 {
     width: 4vw;
   }
-  .title-zenitsu, .title-japan {
+  .title-zenitsu,
+  .title-japan {
     font-size: 8em;
+  }
+  .logo {
+    width: 500px;
   }
 }
