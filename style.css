@@ -146,7 +146,7 @@ section {
 }
 .box .big-rock-3 {
   position: absolute;
-  bottom: 50px;
+  bottom: 0;
   left: 300px;
   width: 10vw;
   transform: translateY(0);
@@ -155,14 +155,16 @@ section {
 }
 .box .big-rock-4 {
   position: absolute;
-  bottom: 30px;
+  bottom: 0px;
   right: 100px;
   width: 10vw;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
 }
 .box .big-rock-5 {
   position: absolute;
-  bottom: 30px;
+  bottom: 0;
   left: 200px;
   width: 10vw;
   transform: translateY(0);
@@ -180,9 +182,9 @@ section {
 }
 .box .big-rock-6 {
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: 0;
-  rotate: 35deg;
+  rotate: -35deg;
   width: 10vw;
   transform: translateY(0);
   transition: transform 0.5s ease-out;
@@ -198,12 +200,12 @@ section {
 }
 .box .big-rock-8 {
   position: absolute;
-  right: 0;
+  right: 50px;
   bottom: 20px;
   width: 10vw;
   transform: translateY(0);
   transition: transform 0.5s ease-out;
-  rotate: -35deg;
+  rotate: 35deg;
   filter: brightness(0.5) contrast(1.2) saturate(1.5);
 }
 
@@ -230,7 +232,6 @@ footer {
 }
 .logo {
   width: 350px;
-  margin: 5rem;
   transform: translateY(0);
   transition: transform 0.5s ease-out;
 }
@@ -241,6 +242,18 @@ video {
   width: 100%;
   object-fit: cover;
 }
+
+footer {
+  position: relative;
+}
+ footer .logo {
+  position: absolute;
+  z-index: 1;
+ }
+ video {
+  position: relative;
+  z-index: -1;
+ }
 
 /* ////////////////////////////////////////   Media Queries */
 
@@ -302,6 +315,20 @@ video {
   .box {
     margin: 3rem;
   }
+
+  footer {
+    padding-top: 5rem;
+  }
+
+  .logo {
+    width: 250px;
+    margin: auto;
+  }
+  
+  video {
+    height: 100%;
+    object-fit: contain;
+  }
 }
 @media (min-width: 768px) {
   .box {
@@ -336,12 +363,9 @@ video {
 }
 
 @media only screen and (min-width: 768px) {
-  footer {
-    position: relative;
+  video {
+    height: 100vh;
   }
-   footer .logo {
-    position: absolute;
-   }
 }
 
 @media only screen and (min-width: 992px) {

@@ -66,29 +66,29 @@ document.addEventListener("scroll", function () {
 
     if (isBox2InView) {
       document.querySelector(".big-rock-1").style.transform = `translateY(${
-        scrollY * -0.3
-      }px) rotate(${scrollY * 0.2}deg)`;
+        scrollY * -0.1
+      }px) `;
       document.querySelector(".big-rock-2").style.transform = `translateY(${
         scrollY * -0.2
-      }px) rotate(${scrollY * -0.15}deg)`;
+      }px) `;
       document.querySelector(".big-rock-3").style.transform = `translateY(${
-        scrollY * -0.25
-      }px) rotate(${scrollY * 0.25}deg)`;
+        scrollY * -0.15
+      }px) `;
       document.querySelector(".big-rock-4").style.transform = `translateY(${
         scrollY * -0.1
-      }px) rotate(${scrollY * -0.1}deg)`;
+      }px) `;
       document.querySelector(".big-rock-5").style.transform = `translateY(${
-        scrollY * -0.3
-      }px) rotate(${scrollY * 0.4}deg)`;
+        scrollY * -0.1
+      }px) `;
       document.querySelector(".big-rock-6").style.transform = `translateY(${
-        scrollY * -0.4
-      }px) rotate(${scrollY * -0.3}deg)`;
+        scrollY * -0.1
+      }px) `;
       document.querySelector(".big-rock-7").style.transform = `translateY(${
-        scrollY * -0.35
-      }px) rotate(${scrollY * 0.35}deg)`;
+        scrollY * -0.15
+      }px) `;
       document.querySelector(".big-rock-8").style.transform = `translateY(${
         scrollY * -0.15
-      }px) rotate(${scrollY * -0.2}deg)`;
+      }px) `;
     } else {
       // Reset transformations if not in view
       const resetTransform = "translateY(0) rotate(0deg)";
