@@ -377,6 +377,15 @@ footer {
     height: 100%;
     object-fit: contain;
   }
+
+  .card-section {
+    background-image: url('https://wallpapercave.com/wp/wp8327049.jpg');
+    max-width: 100vw;
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 @media (min-width: 768px) {
   .box {
