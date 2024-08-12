@@ -25,6 +25,7 @@ section {
   background: url("./assets/sky.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
+  background-position: center;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -36,6 +37,7 @@ section {
 .moon {
   background: url("./assets/moon.png") no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
   width: 800px;
   height: 800px;
   position: absolute;
@@ -128,8 +130,8 @@ section {
 
 .box .big-rock-1 {
   position: absolute;
-  bottom: 0;
-  left: 120px;
+  bottom: -30px;
+  left: 100px;
   width: 10vw;
   rotate: -25deg;
   transform: translateY(0);
@@ -138,7 +140,7 @@ section {
 }
 .box .big-rock-2 {
   position: absolute;
-  bottom: 10px;
+  bottom: -30px;
   left: 400px;
   width: 10vw;
   transform: translateY(0);
@@ -147,7 +149,7 @@ section {
 }
 .box .big-rock-3 {
   position: absolute;
-  bottom: 0;
+  bottom: -30px;
   left: 300px;
   width: 10vw;
   transform: translateY(0);
@@ -156,7 +158,7 @@ section {
 }
 .box .big-rock-4 {
   position: absolute;
-  bottom: 0px;
+  bottom: -10px;
   right: 100px;
   width: 10vw;
   transform: translateY(0);
@@ -165,7 +167,7 @@ section {
 }
 .box .big-rock-5 {
   position: absolute;
-  bottom: 0;
+  bottom: -30px;
   left: 200px;
   width: 10vw;
   transform: translateY(0);
@@ -174,7 +176,7 @@ section {
 }
 .box .big-rock-5 {
   position: absolute;
-  bottom: 0;
+  bottom: -30px;
   right: 50px;
   width: 10vw;
   transform: translateY(0);
@@ -184,8 +186,8 @@ section {
 .box .big-rock-6 {
   position: absolute;
   left: 25%;
-  bottom: 0;
-  rotate: -35deg;
+  bottom: -30px;
+  rotate: -45deg;
   width: 10vw;
   transform: translateY(0);
   transition: transform 0.5s ease-out;
@@ -193,7 +195,7 @@ section {
 }
 .box .big-rock-7 {
   position: absolute;
-  bottom: 0;
+  bottom: -30px;
   width: 10vw;
   transform: translateY(0);
   transition: transform 0.5s ease-out;
@@ -202,7 +204,7 @@ section {
 .box .big-rock-8 {
   position: absolute;
   right: 30%;
-  bottom: 20px;
+  bottom: -30px;
   width: 10vw;
   transform: translateY(0);
   transition: transform 0.5s ease-out;
@@ -256,7 +258,62 @@ footer {
   z-index: -1;
  }
 
-/* ////////////////////////////////////////   Media Queries */
+ /* Cards style */
+
+ .card-section {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  background-image: url("https://external-preview.redd.it/uFgDbEUhURbL7LiLdkckCKGkP95m5R0535z3c89bu9I.png?format=pjpg&auto=webp&s=0484f5905f240bf269fb20b92964669f70804848");
+  object-fit: contain;
+  backdrop-filter: blur(10px);
+ }
+
+ .card-section::before,
+.card-section::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Adjust the height to control the fade size */
+  pointer-events: none; /* Ensure the fade does not interfere with content */
+  z-index: 1;
+}
+
+.card-section::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
+}
+
+.card-section::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+}
+
+ .custom-card {
+  height: 50%;
+  width: 50%;
+  background-color: white;
+  border-radius: 0.7rem;
+ }
+
+ .card-red {
+  background-color: red;
+  padding: 2%;
+ }
+ .card-black {
+  background-color: black;
+  padding: 2%;
+ }
+ .card-white {
+  background-color: white;
+  padding: 2%;
+ }
+
+
+
+
+/* ///////////////////////////////////////////////   Media Queries */
 
 @media (max-width: 480px) {
   .title-zenitsu,
@@ -283,9 +340,12 @@ footer {
   /* Big rocks */
   .box .big-rock-1 {
     width: 15vw;
+    bottom: -20px;
   }
   .box .big-rock-2 {
     width: 15vw;
+    left: 60%;
+    rotate: 35deg;
   }
   .box .big-rock-3 {
     width: 15vw;
@@ -295,6 +355,7 @@ footer {
   }
   .box .big-rock-5 {
     width: 15vw;
+    left: 30%;
   }
   .box .big-rock-6 {
     width: 15vw;
@@ -303,13 +364,14 @@ footer {
     width: 15vw;
   }
 
-  .box .big-rock-1 {
-    bottom: 0;
-  }
   /* Big rocks */
 
   .zenitsu h1 {
     font-size: 18vw;
+  }
+
+  footer .logo {
+    top: 40px;
   }
 }
 @media (max-width: 768px) {
@@ -393,5 +455,19 @@ footer {
   }
   .logo {
     width: 500px;
+  }
+  .box .rock-piece-3 {
+    left: 30%;
+  }
+
+}
+@media (min-width: 768px) {
+  .box .big-rock-2 {
+    left: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .box .big-rock-5 {
+    left: 30%;
   }
 }
