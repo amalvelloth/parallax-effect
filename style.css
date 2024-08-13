@@ -295,7 +295,71 @@ footer {
 
 
 
+:root {
+	--cards: 2;
+	--cardHeight: 87vh;
+	--cardTopPadding: 1.5em;
+	--cardMargin: 4vw;
+}
 
+.container-custom {
+  display: flex;
+  justify-content: center;
+	width: 100%;
+	margin: 0 auto;
+  background-color: black;
+  padding-bottom: 5rem;
+}
+
+#cards {
+  padding-top: 5rem;
+	list-style: none;
+	padding-left: 0;
+	display: grid;
+  width: 50%;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--cards), var(--cardHeight));
+	gap: var(--cardMargin);
+	padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+  margin-bottom: 0;
+}
+
+#card1 {
+  top: 50px;
+	--index: 1;
+}
+#card2 {
+	--index: 2;
+}
+
+.card-new {
+	position: sticky;
+	top: 0;
+	padding-top: calc(var(--index) * var(--cardTopPadding));
+}
+
+#card1 .card-body {
+	background-color: red;
+}
+#card2 .card-body {
+	background-color: white;
+}
+
+.card-body {
+	box-sizing: border-box;
+	padding: 30px;
+	border-radius: 50px;
+	box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
+	height: var(--cardHeight);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.5s;
+}
+
+h2 {
+	font-size: 2.5em;
+}
 /* ///////////////////////////////////////////////   Media Queries */
 
 @media (max-width: 480px) {
@@ -386,6 +450,22 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+  #cards {
+    width: 90%;
+  }
+  #card1 .card-body {
+    height: 400px;
+  }
+  #card2 .card-body {
+    height: 400px;
+  }
+  .container-custom {
+    padding-bottom: 0;
+  }
+  #cards {
+    padding-bottom: 0;
+  }
 }
 @media (min-width: 768px) {
   .box {
@@ -396,11 +476,6 @@ footer {
   }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  .custom-card {
-    width: 70%;
-  }
-}
 
 @media only screen and (min-width: 481px) and (max-width: 991px) {
   .box .rock-piece-1 {
