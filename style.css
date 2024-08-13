@@ -339,13 +339,14 @@ footer {
 }
 
 #card1 .card-body {
-	background-color: red;
+	background-color: #FF010B;
 }
 #card2 .card-body {
 	background-color: white;
 }
 
 .card-body {
+  position: relative;
 	box-sizing: border-box;
 	padding: 30px;
 	border-radius: 50px;
@@ -355,13 +356,36 @@ footer {
 	justify-content: center;
 	align-items: center;
 	transition: all 0.5s;
+  z-index: -1;
 }
 
-h2 {
-	font-size: 2.5em;
+.card-body .about {
+  bottom: 0;
+  margin-bottom: 0;
 }
+
+
+
+
+.zenitsu-sword {
+  width: 50px;
+}
+
+
+
 /* ///////////////////////////////////////////////   Media Queries */
-
+@media (max-width: 380px) {
+  .card-body h2 {
+    font-size: 0.8em;
+    padding: 7px;
+  }
+}
+@media (min-width: 380px) and (max-width: 480px) {
+  .card-body h2 {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+}
 @media (max-width: 480px) {
   .title-zenitsu,
   .title-japan {
@@ -421,8 +445,14 @@ h2 {
     top: 40px;
   }
 
+  .card-body {
+    border-radius: 2rem;
+  }
 
 }
+
+
+
 @media (max-width: 768px) {
   .box {
     margin: 3rem;
@@ -458,7 +488,7 @@ h2 {
     height: 400px;
   }
   #card2 .card-body {
-    height: 400px;
+    max-height: 400px;
   }
   .container-custom {
     padding-bottom: 0;
@@ -473,6 +503,11 @@ h2 {
   }
   .box {
     width: 80%;
+  }
+  .card-body h2 {
+    font-size: 1.15em;
+    line-height: 30px;
+    padding: 15px;
   }
 }
 
@@ -496,6 +531,11 @@ h2 {
   .title-zenitsu,
   .title-japan {
     font-size: 6em;
+  }
+
+  .card-body h2 {
+    font-size: 1.05em;
+    padding: 10px;
   }
   
 }
