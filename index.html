@@ -30,7 +30,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
     <!--Google fonts-->
+    <style>
+        .test {
+          font-size: clamp(12px, 5vw, 20px);
+        }
+      </style>
 </head>
 
 <body>
@@ -72,10 +82,10 @@
     </section>
 
     <!--Cards-->
-    <div class="container-custom">
+    <div class="container-custom" style="background-color: black;">
         <ul id="cards">
-            <li class="card-new" id="card1">
-                <div class="card-body card-body1 d-flex align-items-center">
+            <li class="card-main" id="card1">
+                <div class="red-card">
                     <div class="row row1">
                         <div class="col-12 text-center">
                             <h1 class="text-center">善逸 我妻</h1>
@@ -99,20 +109,23 @@
                     </div>
                 </div>
             </li>
-            <li class="card-new" id="card2">
-                <div class="card-body card-body2">
-                   
-                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" loading="lazy">
-                        <source src="assets/zenitsu-edit.mp4" type="video/mp4" />
-                    </video>
-                    <div class="row position-relative">
-                        <div class="col-6 position-relative">
-                            <div class="image-container position-relative">
-                                <img class="img-fluid" src="https://cdn.shopify.com/s/files/1/1205/3844/products/BAS62118_1.jpg?v=1628629999" alt="">
-                            </div>
+            <li class="card-main" id="card2">
+                <div class="video-card">
+                    <div class="video-container">
+                        <video class="video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"
+                            loading="lazy">
+                            <source src="./assets/zenitsu-edit.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="content">
+                        <div class="image">
+                            <img src="https://cdn.shopify.com/s/files/1/1205/3844/products/BAS62118_1.jpg?v=1628629999"
+                                alt="Sword Image">
                         </div>
-                        <div class="col-6 position-relative">
-                            <h1>Lorem ipsum dolor sit amet consectetur</h1>
+                        <div class="text">
+                            <p>LOREM IPSUM</p>
+                            <p>LOREM IPSUM</p>
+                            <p>LOREM IPSUM</p>
                         </div>
                     </div>
                 </div>
@@ -122,7 +135,7 @@
     </div>
 
 
-    <section class="card-section"> <!--Containing one background image, give in css-->
+    <section class="fade-section"> <!--Containing one background image, give in css-->
 
     </section>
 
@@ -141,13 +154,3 @@
 </body>
 
 </html>
-
- <!-- <div class="row row2">
-                        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" loading="lazy">
-                            <source src="assets/zenitsu-edit.mp4" type="video/mp4" />
-                        </video>
-                    
-                        <div class="row">
-                            <img class="img-fluid small-img" src="https://cdn.shopify.com/s/files/1/1205/3844/products/BAS62118_1.jpg?v=1628629999" alt="">
-                        </div>
-                    </div> -->

@@ -19,6 +19,7 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: black;
 }
 
 .Parallax-1 {
@@ -249,18 +250,18 @@ video {
 footer {
   position: relative;
 }
- footer .logo {
+footer .logo {
   position: absolute;
   z-index: 1;
- }
- video {
+}
+video {
   position: relative;
   z-index: -1;
- }
+}
 
- /* Cards style */
+/* Cards style */
 
- .card-section {
+.fade-section {
   background-color: black;
   height: 300px;
   width: 100%;
@@ -268,11 +269,11 @@ footer {
   background-attachment: fixed;
   background-position: center;
   backdrop-filter: blur(10px);
- }
+}
 
- .card-section::before,
-.card-section::after {
-  content: '';
+.fade-section::before,
+.fade-section::after {
+  content: "";
   position: absolute;
   left: 0;
   width: 100%;
@@ -281,137 +282,139 @@ footer {
   z-index: 1;
 }
 
-.card-section::before {
+.fade-section::before {
   top: 0;
   background: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
 }
 
-.card-section::after {
+.fade-section::after {
   bottom: 0;
   background: linear-gradient(to top, rgb(0, 0, 0), transparent);
 }
 
-
-
-
-
 :root {
-	--cards: 2;
-	--cardHeight: 87vh;
-	--cardTopPadding: 1.5em;
-	--cardMargin: 4vw;
+  --cards: 2;
+  --cardHeight: 87vh;
+  --cardTopPadding: 1em;
+  --cardMargin: 4vw;
 }
 
 .container-custom {
-  display: flex;
-  justify-content: center;
-	width: 100%;
-  height: 200%;
-	margin: 0 auto;
-  background-color: black;
-  padding-bottom: 5rem;
+  padding-top: 5rem;
 }
 
 #cards {
-  padding-top: 5rem;
-	list-style: none;
-	padding-left: 0;
-	display: grid;
-  width: 50%;
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(var(--cards), var(--cardHeight));
-	gap: var(--cardMargin);
-	padding-bottom: calc(var(--cards) * var(--cardTopPadding));
-  margin-bottom: 0;
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(var(--cards), var(--cardHeight));
+  gap: var(--cardMargin);
+  padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+  margin-bottom: var(--cardMargin);
+  margin: 0;
+  padding-bottom: 5rem;
+}
+
+.card-main {
+  position: sticky;
+  top: 15%;
+  padding-top: calc(var(--index) * var(--cardTopPadding));
 }
 
 #card1 {
-  top: 50px;
-	--index: 1;
+  --index: 1;
 }
 #card2 {
-	--index: 2;
+  --index: 2;
 }
 
-.card-new {
-	position: sticky;
-	top: 0;
-	padding-top: calc(var(--index) * var(--cardTopPadding));
+.red-card {
+  background-color: red;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 2rem;
+  transition: all 0.5s;
 }
 
-#card1 .card-body {
-	background-color: #FF010B;
-}
-#card2 .card-body {
-	background-color: white;
-}
-
-.card-body {
-  position: relative;
-	box-sizing: border-box;
-	padding: 30px;
-	border-radius: 50px;
-	box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
-	height: var(--cardHeight);
-	transition: all 0.5s;
-  z-index: -1;
-}
-
-.row1 h1{
+.row1 h1 {
   font-family: "Noto Serif JP", serif;
   font-weight: 900;
+  font-size: calc(3rem + 2vw);
 }
-.row2 img {
-  width: 90%;
+.row1 p {
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 1em;
+  font-size: calc(1rem + 0.4vw);
 }
-.card-body2 {
-  position: relative;
+.about {
+  padding: 10px;
+  font-weight: 500;
+  font-size: calc(0.7rem + 0.5vw);
 }
 
-.card-body2 .row2 video {
-  max-height: 500px;
-  object-fit: contain;
-  background-position: center;
-  width: 100%;
-  border-radius: 50px;
+/* Custom Card Styles */
+.video-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  position: relative;
-  top: 0;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 2rem;
+  transition: all 0.5s;
 }
 
-.card-body2 video {
+.video-container {
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
   position: relative;
-  padding: 20px;
+  overflow: hidden;
+  z-index: 20;
 }
 
-.card-body2 .row .image-container img {
-  margin: 10px;
+.video {
   position: absolute;
-}
-
-#card2 {
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  padding: 1rem 1rem 0 1rem;
 }
 
+.content {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  gap: 15px;
+}
 
+.image img {
+  max-width: 180px;
+  border-radius: 5px;
+}
 
+.text {
+  flex: 1;
+}
 
-
-
-
+.text p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 1em;
+}
 
 /* ///////////////////////////////////////////////   Media Queries */
 @media (max-width: 380px) {
-  .card-body h2 {
-    font-size: 0.8em;
-    padding: 7px;
-  }
 }
+
 @media (min-width: 380px) and (max-width: 480px) {
-  .card-body h2 {
-    font-size: 0.9em;
-    padding: 10px;
-  }
 }
 @media (max-width: 480px) {
   .title-zenitsu,
@@ -472,21 +475,8 @@ footer {
     top: 40px;
   }
 
-  .card-body {
-    border-radius: 2rem;
-  }
-
-  .row1 h1 {
-    font-size: 13vw;
-  }
-
-  .card-body2 .row2 video {
-    border-radius: 10px;
-  }
-
+  /* Cards */
 }
-
-
 
 @media (max-width: 768px) {
   .box {
@@ -501,14 +491,14 @@ footer {
     width: 250px;
     margin: auto;
   }
-  
+
   .fire {
     height: 100%;
     object-fit: contain;
   }
 
-  .card-section {
-    background-image: url('https://wallpapercave.com/wp/wp8327049.jpg');
+  .fade-section {
+    background-image: url("https://wallpapercave.com/wp/wp8327049.jpg");
     max-width: 100vw;
     background-position: center;
     object-fit: cover;
@@ -516,23 +506,8 @@ footer {
     background-repeat: no-repeat;
   }
 
-  #cards {
-    width: 90%;
-  }
-  #card1 .card-body {
-    max-height: 60vh;
-  }
-  #card2 .card-body {
-    max-height: 100%;
-  }
   .container-custom {
     padding-bottom: 0;
-  }
-  #cards {
-    padding-bottom: 0;
-  }
-  #card2 {
-    height: 80%;
   }
 }
 @media (min-width: 768px) {
@@ -542,13 +517,19 @@ footer {
   .box {
     width: 80%;
   }
-  .card-body h2 {
-    font-size: 1.15em;
+
+  /* .row1 h1 {
+    font-size: 8vw;
+  }
+  .row1 h1 {
+    font-size: 8vw;
+  } */
+  /* .about {
     line-height: 30px;
     padding: 15px;
-  }
+    font-size: clamp(12px, 10vw, 20px);
+  } */
 }
-
 
 @media only screen and (min-width: 481px) and (max-width: 991px) {
   .box .rock-piece-1 {
@@ -570,19 +551,9 @@ footer {
   .title-japan {
     font-size: 6em;
   }
-
-  .card-body h2 {
-    font-size: 1.05em;
-    padding: 10px;
-  }
-  .row1 h1 {
-    font-size: 8vw;
-  }
 }
 
 @media only screen and (min-width: 768px) {
-  
-  
 }
 
 @media only screen and (min-width: 992px) {
@@ -616,7 +587,6 @@ footer {
   .fire {
     height: 100vh;
   }
-
 }
 @media (min-width: 768px) {
   .box .big-rock-2 {
@@ -628,26 +598,3 @@ footer {
     left: 30%;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
