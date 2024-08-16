@@ -341,7 +341,20 @@ video {
   transition: all 0.5s;
 }
 
+.avatar {
+  left: 5px;
+  top: 5px;
+  position: relative;
+  width: 70px; /* Adjust the size of the avatar */
+  height: 70px; /* Ensure it’s a square */
+  border-radius: 50%; /* Make the avatar circular */
+  vertical-align: middle; /* Align the avatar vertically with the text */
+  margin-right: 10px; /* Space between the avatar and the text */
+  border: 2px black solid;
+}
+
 .row1 h1 {
+  position: relative;
   font-family: "Noto Serif JP", serif;
   font-weight: 900;
   font-size: calc(3rem + 2vw);
@@ -350,11 +363,13 @@ video {
   font-family: "Noto Serif JP", serif;
   letter-spacing: 1em;
   font-size: calc(1rem + 0.4vw);
+  font-weight: 100;
 }
 .about {
   padding: 10px;
   font-weight: 500;
   font-size: calc(0.7rem + 0.5vw);
+  color: white;
 }
 
 /* Custom Card Styles */
@@ -401,6 +416,9 @@ video {
 }
 
 .text {
+  color: red;
+  font-weight: 900;
+  font-family: "Noto Serif JP", serif;
   flex: 1;
 }
 
@@ -517,18 +535,9 @@ video {
   .box {
     width: 80%;
   }
-
-  /* .row1 h1 {
-    font-size: 8vw;
+  .container-custom {
+    padding-bottom: 4rem;
   }
-  .row1 h1 {
-    font-size: 8vw;
-  } */
-  /* .about {
-    line-height: 30px;
-    padding: 15px;
-    font-size: clamp(12px, 10vw, 20px);
-  } */
 }
 
 @media only screen and (min-width: 481px) and (max-width: 991px) {
