@@ -16,6 +16,11 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <!--Bootstrap-->
+
+    <!--Font awsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Font awsome-->
+    
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,11 +49,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+JP:wght@200..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <!--Google fonts-->
-    <style>
-        .test {
-            font-size: clamp(12px, 5vw, 20px);
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -125,10 +126,13 @@
             <li class="card-main" id="card2">
                 <div class="video-card">
                     <div class="video-container">
-                        <video class="video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"
-                            loading="lazy">
+                        <video class="video" playsinline autoplay muted loop loading="lazy">
                             <source src="./assets/zenitsu-edit.mp4" type="video/mp4" />
                         </video>
+                        <button class="mute-toggle" aria-label="Unmute Video">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </button>
+                        
                     </div>
                     <div class="content">
                         <div class="image">
@@ -142,6 +146,7 @@
                     </div>
                 </div>
             </li>
+            
 
         </ul>
     </div>
